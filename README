@@ -1,0 +1,99 @@
+<!-- E-Commerce Backend for Vistar WebX -->
+This project is a backend service for an e-commerce website to manage products and categories using MongoDB, Node.js, and Express.js. It supports CRUD operations for both products and categories, adhering to the given requirements.
+
+
+<!-- Hosted API --->> -->
+The backend is deployed on Render. You can access the hosted API here:
+https://e-commercebybasant.onrender.com
+<!--  -->
+
+
+<!-- Postman Collection -->
+All APIs are documented in the Postman collection:
+Postman Collection
+
+<!-- Database Schema Design -->
+
+<!-- Category Schema -->
+_id: ObjectId (Primary Key)
+name: String (Unique, Required)
+description: String
+
+<!-- Product Schema -->
+_id: ObjectId (Primary Key)
+name: String (Required)
+price: Number (Required, Positive)
+stock: Number (Required, Default: 0)
+categoryId: ObjectId (Reference to Category, Required)
+
+
+<!-- Relationships -->
+Each product belongs to one category.
+Each category can contain multiple products.
+
+
+<!-- Features -->
+   **   CRUD Operations
+
+   Category APIs
+   **   Create a Category ---->> Create a new category with a unique name.
+   **   Get All Categories ---->> Retrieve all categories.
+   **   Get a Category by ID (with Products) ---->> Fetch a specific category along with its associated products.
+   **   Update a Category ---->> Modify an existing category.
+   **   Delete a Category ---->> Mark associated products as uncategorized without deleting them.
+
+   Product APIs
+   **   Create a Product ---->> Add a new product associated with a category.
+   **   Get All Products ---->> Retrieve all products.
+   **   Get a Product by ID (with Category) ---->> Fetch a specific product with its associated category details.
+   **   Update a Product ---->> Update product details.
+   **   Delete a Product ---->> Remove a product from the database.
+
+
+<!-- Installation and Setup Instructions -->
+Clone the Repository ---->> git clone -->>> https://github.com/basa738997/E-commerce-for-Vistar-WebX-by-BAsant-Meena.git
+
+Install Dependencies
+npm install
+Set Up Environment Variables
+Create a .env file in the root directory with the following variables:
+
+env ---->>>
+MONGO_URI= mongodb+srv://mbasant805:Basant123@cluster0.j7oes.mongodb.net/E-Commerce
+PORT=5000
+<!--  -->
+
+Start the Server ------>  nodemon || nodemon server.js
+
+<!--  -->
+
+
+<!--  -->
+
+Test APIs  ------>>>>>>>
+
+Use the Postman collection or any API client to test the APIs.
+Base URL: http://localhost:5000
+<!--  -->
+
+<!--  -->
+Validation and Constraints --->>>
+
+Categories --->   name: Must be unique and required.
+Products ----->   price: Must be positive.
+                  stock: Cannot be negative.
+<!--  -->
+
+<!--  -->
+Deployment Details --->>
+
+The backend is hosted on Render --->>> https://e-commercebybasant.onrender.com
+<!--  -->
+
+<!--  -->
+
+Additional Notes ---->>>
+
+This project is designed using Mongoose to define schemas and manage relationships efficiently.
+Adheres to best practices for schema validation and error handling.
+<!--  -->
