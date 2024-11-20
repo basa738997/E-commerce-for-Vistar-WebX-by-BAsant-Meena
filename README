@@ -35,14 +35,28 @@ Each category can contain multiple products.
 <!-- Features -->
    **   CRUD Operations
 
-   Category APIs
+   <!-- All API's -->
+   Products API
+   **   POST -  https://e-commercebybasant.onrender.com/api/v1/products/create
+   **   GET - https://e-commercebybasant.onrender.com/api/v1/products/getAll
+   **   GET - https://e-commercebybasant.onrender.com/api/v1/products/get/:id
+   **   PUT - https://e-commercebybasant.onrender.com/api/v1/products/update/:id
+   **   DELETE - https://e-commercebybasant.onrender.com/api/v1/products/delete/:id
+Category API
+   **   POST -  https://e-commercebybasant.onrender.com/api/v1/categories/create
+   **   GET -  https://e-commercebybasant.onrender.com/api/v1/categories/getAll
+   **   GET -  https://e-commercebybasant.onrender.com/api/v1/categories/get/:id
+   **   PUT -  https://e-commercebybasant.onrender.com/api/v1/categories/update/:id
+   **   DELETE -  https://e-commercebybasant.onrender.com/api/v1/categories/delete/:id
+
+   <!-- Category APIs -->
    **   Create a Category ---->> Create a new category with a unique name.
    **   Get All Categories ---->> Retrieve all categories.
    **   Get a Category by ID (with Products) ---->> Fetch a specific category along with its associated products.
    **   Update a Category ---->> Modify an existing category.
    **   Delete a Category ---->> Mark associated products as uncategorized without deleting them.
 
-   Product APIs
+   <!-- Product APIs -->
    **   Create a Product ---->> Add a new product associated with a category.
    **   Get All Products ---->> Retrieve all products.
    **   Get a Product by ID (with Category) ---->> Fetch a specific product with its associated category details.
